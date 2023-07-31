@@ -58,7 +58,9 @@ VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);
 -- Hiển thị tất cả các sinh viên có tên bắt đầu bảng ký tự ‘h’.
-SELECT * FROM Student WHERE StudentName LIKE 'h%';
+SELECT * 
+FROM Student S
+ WHERE substring_index(StudentName," ",-1) like 'h%' ;
 -- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12.
 SELECT * FROM Class WHERE MONTH(StartDate) = 12;
 -- Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.
@@ -67,3 +69,7 @@ SELECT * FROM Subject WHERE Credit >= 3 AND Credit <= 5;
 UPDATE Student SET ClassId = 2 WHERE StudentName = 'Hung';
 -- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
 SELECT StudentName,SubName,Mark FROM Student,Subject,Mark ORDER BY Mark DESC, StudentName ASC;
+-- 4. Lấy thông tin của các học viên tên “Hai” và 'Huynh’.
+select *
+from Student s
+where s.StudentName like '%hai' or s.StudentName like '%huynh';

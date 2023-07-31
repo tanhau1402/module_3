@@ -1,25 +1,52 @@
-create database quan_ly_ban_hang;
-use quan_ly_ban_hang;
-create table customer(
-c_id int primary key auto_increment,
-c_name varchar(50),
-c_age date);
-create table orderof(
-o_id int primary key auto_increment,
-c_id int NOT NULL auto_increment,
-o_date date,
-o_total_price float,
- foreign key (c_id) references customer(c_id)
+CREATE DATABASE quan_ly_ban_hang;
+USE quan_ly_ban_hang;
+CREATE TABLE customer(
+c_id INT PRIMARY KEY AUTO_INCREMENT,
+c_name VARCHAR(50),
+c_age TINYINT
 );
-create table product(
-p_id int primary key auto_increment,
-p_name varchar(255),
-p_price float);
-create table order_detail(
-o_id int primary key auto_increment,
-p_id int primary key auto_increment,
-od_qty varchar(255),
-primary key(o_id,p_id),
-foreign key (o_id) references orderof(o_id),
-foreign key (p_id) references product(p_id)
+CREATE TABLE orderof(
+o_id INT PRIMARY KEY AUTO_INCREMENT,
+c_id INT,
+o_date DATETIME,
+o_total_price FLOAT,
+ FOREIGN KEY (c_id) REFERENCES customer(c_id)
 );
+CREATE TABLE product(
+p_id INT PRIMARY KEY AUTO_INCREMENT,
+p_name VARCHAR(255),
+p_price INT);
+CREATE TABLE order_detail(
+o_id INT DEFAULT 0 ,
+p_id INT DEFAULT 0 ,
+od_qty INT,
+PRIMARY KEY(o_id,p_id),
+FOREIGN KEY (o_id) REFERENCES orderof(o_id),
+FOREIGN KEY (p_id) REFERENCES product(p_id)
+);
+INSERT INTO customer (c_name,c_age)
+VALUES ("Minh Quan",10),
+       ("Ngoc Oanh",20),
+       ("Hong Ha",50);
+INSERT INTO orderof(o_date,o_total_price)
+VALUES ('2006-3-21',Null),
+       ('2006-3-23',Null),
+       ('2006-3-16',Null);
+INSERT INTO product(p_name,p_price)
+VALUES ("May Giat",3),
+       ("Tu Lanh",5),
+       ("Dieu Hoa",7),
+       ("Quat",1),
+       ("Bep Dien",2);
+INSERT INTO order_detail(od_qty)
+VALUES (3),
+       (7),
+	   (2),
+	   (1),
+	   (8),
+	   (4),
+	   (3);
+       
+       
+       
+       
