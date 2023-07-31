@@ -1,0 +1,10 @@
+img {
+    height: 200px;
+}
+
+header {
+    text-align: left;
+    background-image: url("https://media.licdn.com/dms/image/D5616AQFmHK05UK9sfw/profile-displaybackgroundimage-shrink_200_800/0/1690182994036?e=2147483647&v=beta&t=OoB7hnKUakQr67LJ-QlHgJNGWwFNi1MEmrVtdcoIjIg");
+    padding: 10px;
+    font-family: "American Typewriter";
+}
