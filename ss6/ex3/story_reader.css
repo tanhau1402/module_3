@@ -9,7 +9,9 @@ header {
     background-image: url("https://media.viez.vn/prod/2021/7/30/1627656072238_8935945d45.png");
     height: 100px;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
+
+    /*border-image: url("https://media.viez.vn/prod/2021/7/30/1627656072238_8935945d45.png") 30 round;*/
 }
 
 h1 {
@@ -24,6 +26,7 @@ h1 {
 main {
     height: 100%;
     width: 100%;
+    /*background-color: beige;*/
 }
 
 section {
