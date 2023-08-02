@@ -1,0 +1,57 @@
+header {
+    height: 100px;
+    background-color: #0099cc;
+    color: white;
+
+}
+
+nav {
+    margin-top: 50px;
+    float:left;
+    width: 150px;
+    background: #0099cc;
+}
+
+a {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+a:hover {
+    background-color: darkturquoise;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 10px;
+}
+
+main {
+    margin: 0 200px;
+    background-color: white;
+}
+
+section {
+    margin: 10px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+}
