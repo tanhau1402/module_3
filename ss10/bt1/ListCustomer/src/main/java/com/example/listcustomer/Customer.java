@@ -1,4 +1,4 @@
-package com.example.customer;
+package com.example.listcustomer;
 
 public class Customer {
     private String name;
